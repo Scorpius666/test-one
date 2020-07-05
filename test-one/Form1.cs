@@ -27,8 +27,7 @@ namespace test_one
             try
             {
                 int op1Number = int.Parse(this.textBoxOP1.Text);
-                int op2Number = int.Parse(this.textBoxOP2.Text);
-                this.labelResult.Text = this.textBoxOP1.Text + this.textBoxOP2.Text;
+                int op2Number = int.Parse(this.textBoxOP2.Text);//将文本框中的text转为int以进行数学运算
                 int result = op1Number + op2Number;
                 this.labelResult.Text = result.ToString();
 
@@ -38,6 +37,51 @@ namespace test_one
                 this.labelResult.Text = ex.Message;
             }
           
+        }
+
+        private void buttonsub_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int opNumber1 = int.Parse(this.textBoxOP1.Text);
+                int opNumber2 = int.Parse(this.textBoxOP2.Text);
+                int result = opNumber1 - opNumber2;
+                this.labelResult.Text = result.ToString();
+            }
+            catch(Exception ex)
+            {
+                this.labelResult.Text = ex.Message;
+            }
+        }
+
+        private void buttonmul_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int opNumber1 = int.Parse(this.textBoxOP1.Text);
+                int opNumber2 = int.Parse(this.textBoxOP2.Text);
+                int result = opNumber1 * opNumber2;
+                this.labelResult.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                this.labelResult.Text = ex.Message;
+            }
+        }
+
+        private void buttondiv_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int opNumber1 = int.Parse(this.textBoxOP1.Text);
+                int opNumber2 = int.Parse(this.textBoxOP2.Text);
+                int result = opNumber1 / opNumber2;
+                this.labelResult.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                this.labelResult.Text = ex.Message;
+            }
         }
     }
 }
